@@ -33,6 +33,8 @@ public class Customer {
 	@Column(name = "customer_emailid")
 	private String CustomerEmailID;
 	
+	@Column(name = "customer_gender")
+	public String CustomerGender;
 	
 	public Customer() {
 		// TODO Auto-generated constructor stub
@@ -40,14 +42,14 @@ public class Customer {
 
 
 	public Customer(int customerID, String customerName, Date dOB, String customerContact, String customerAddress,
-			String customerEmailID) {
-		super();
+			String customerEmailID, String customerGender) {
 		CustomerID = customerID;
 		CustomerName = customerName;
 		DOB = dOB;
 		CustomerContact = customerContact;
 		CustomerAddress = customerAddress;
 		CustomerEmailID = customerEmailID;
+		CustomerGender = customerGender;
 	}
 
 
@@ -109,13 +111,24 @@ public class Customer {
 	public void setCustomerEmailID(String customerEmailID) {
 		CustomerEmailID = customerEmailID;
 	}
+	
+	
+
+	public String getCustomerGender() {
+		return CustomerGender;
+	}
+
+
+	public void setCustomerGender(String customerGender) {
+		CustomerGender = customerGender;
+	}
 
 
 	@Override
 	public String toString() {
 		return "Customer [CustomerID=" + CustomerID + ", CustomerName=" + CustomerName + ", DOB=" + DOB
 				+ ", CustomerContact=" + CustomerContact + ", CustomerAddress=" + CustomerAddress + ", CustomerEmailID="
-				+ CustomerEmailID + "]";
+				+ CustomerEmailID + "CustomerGender= "+ CustomerGender +"]";
 	}
 	
 	

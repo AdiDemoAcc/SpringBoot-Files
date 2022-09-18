@@ -16,4 +16,6 @@ public interface CustomerService {
 	
 	public Customer createCustomer(Customer customer);
 	
+//	public Customer Login(int id,String name);
+	
 }
