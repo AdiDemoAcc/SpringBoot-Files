@@ -40,7 +40,7 @@ public class HelperController {
 		return new ResponseEntity<Helper>(helperService.getHelperById(id),HttpStatus.OK);
 	}
 	
-	@PostMapping("/delete/{id}")
+	@GetMapping("/delete/{id}")
 	public ResponseEntity<String> deleteHelperById(@PathVariable int id)
 	{
 		helperService.deleteHelper(id);

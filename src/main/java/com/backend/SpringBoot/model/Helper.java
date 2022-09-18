@@ -1,7 +1,6 @@
 package com.backend.SpringBoot.model;
 
 import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -39,6 +38,8 @@ public class Helper {
 	@Column(name = "helper_servicecharge")
 	private int HelperServicecharge;
 	
+	@Column(name = "helper_gender")
+	private String HelperGender;
 	
 	public Helper() {
 		// TODO Auto-generated constructor stub
@@ -46,7 +47,7 @@ public class Helper {
 
 
 	public Helper(int helperID, String helperName, Date dOB, String helperAddress, String helperContact,
-			String helperEmail, String helperService, int helperServicecharge) {
+			String helperEmail, String helperService, int helperServicecharge, String helperGender) {
 		super();
 		HelperID = helperID;
 		HelperName = helperName;
@@ -56,6 +57,7 @@ public class Helper {
 		HelperEmail = helperEmail;
 		HelperService = helperService;
 		HelperServicecharge = helperServicecharge;
+		HelperGender = helperGender;
 	}
 
 
@@ -137,13 +139,22 @@ public class Helper {
 	public void setHelperServicecharge(int helperServicecharge) {
 		HelperServicecharge = helperServicecharge;
 	}
+	
+	public String getHelperGender() {
+		return HelperGender;
+	}
+
+
+	public void setHelperGender(String helperGender) {
+		HelperGender = helperGender;
+	}
 
 
 	@Override
 	public String toString() {
 		return "Helper [HelperID=" + HelperID + ", HelperName=" + HelperName + ", DOB=" + DOB + ", HelperAddress="
 				+ HelperAddress + ", HelperContact=" + HelperContact + ", HelperEmail=" + HelperEmail
-				+ ", HelperService=" + HelperService + ", HelperServicecharge=" + HelperServicecharge + "]";
+				+ ", HelperService=" + HelperService + ", HelperServicecharge=" + HelperServicecharge +"HelperGender = "+ HelperGender +"]";
 	}
 
 
