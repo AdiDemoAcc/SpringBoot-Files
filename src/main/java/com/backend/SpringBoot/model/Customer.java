@@ -22,7 +22,7 @@ public class Customer {
 	private String CustomerName;
 	
 	@Column(name = "customer_dob")
-	private Date DOB;
+	private java.sql.Date DOB;
 	
 	@Column(name = "customer_contact")
 	private String CustomerContact;
@@ -41,7 +41,7 @@ public class Customer {
 	}
 
 
-	public Customer(int customerID, String customerName, Date dOB, String customerContact, String customerAddress,
+	public Customer(int customerID, String customerName, java.sql.Date dOB, String customerContact, String customerAddress,
 			String customerEmailID, String customerGender) {
 		CustomerID = customerID;
 		CustomerName = customerName;
@@ -73,12 +73,12 @@ public class Customer {
 	}
 
 
-	public Date getDOB() {
+	public java.sql.Date getDOB() {
 		return DOB;
 	}
 
 
-	public void setDOB(Date dOB) {
+	public void setDOB(java.sql.Date dOB) {
 		DOB = dOB;
 	}
 

@@ -21,7 +21,7 @@ public class Helper {
 	private String HelperName;
 	
 	@Column(name = "helper_dob")
-	private Date DOB;
+	private java.sql.Date DOB;
 
 	@Column(name = "helper_address")
 	private String HelperAddress;
@@ -46,7 +46,7 @@ public class Helper {
 	}
 
 
-	public Helper(int helperID, String helperName, Date dOB, String helperAddress, String helperContact,
+	public Helper(int helperID, String helperName, java.sql.Date dOB, String helperAddress, String helperContact,
 			String helperEmail, String helperService, int helperServicecharge, String helperGender) {
 		super();
 		HelperID = helperID;
@@ -81,12 +81,12 @@ public class Helper {
 	}
 
 
-	public Date getDOB() {
+	public java.sql.Date getDOB() {
 		return DOB;
 	}
 
 
-	public void setDOB(Date dOB) {
+	public void setDOB(java.sql.Date dOB) {
 		DOB = dOB;
 	}
 
